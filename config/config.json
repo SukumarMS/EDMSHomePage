@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "edms-tiles-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/edmsTiles/EdmsTilesWebPart.js",
+          "manifest": "./src/webparts/edmsTiles/EdmsTilesWebPart.manifest.json"
+        }
+      ]
+    },
+    "edms-announcement-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/edmsAnnouncement/EdmsAnnouncementWebPart.js",
+          "manifest": "./src/webparts/edmsAnnouncement/EdmsAnnouncementWebPart.manifest.json"
+        }
+      ]
+    },
+    "edms-media-gallery-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/edmsMediaGallery/EdmsMediaGalleryWebPart.js",
+          "manifest": "./src/webparts/edmsMediaGallery/EdmsMediaGalleryWebPart.manifest.json"
+        }
+      ]
+    }
+  },  
+  "externals": {
+    "jquery": {
+      "path": "https://code.jquery.com/jquery-1.7.0.min.js",
+      "globalName": "jQuery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist": {
+      "path": "./jplist/1.2.0/jplist.js",
+      "globalName": "jplist"
+    },
+    "jplist-core": {
+      "path": "./src/ExternalRef/js/jplist-core.js",
+      "globalName": "jplist-core",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist-pagination": {
+      "path": "./src/ExternalRef/js/jplist-pagination.js",
+      "globalName": "jplist-pagination",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "slick": {
+      "path": "./src/ExternalRef/js/slick.js",
+      "globalName": "slick",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "EdmsTilesWebPartStrings": "lib/webparts/edmsTiles/loc/{locale}.js",
+    "EdmsAnnouncementWebPartStrings": "lib/webparts/edmsAnnouncement/loc/{locale}.js",
+    "EdmsMediaGalleryWebPartStrings": "lib/webparts/edmsMediaGallery/loc/{locale}.js"
+  }
+}
